@@ -14,4 +14,10 @@ export const people: Person[] = [
     image: "https://i.pravatar.cc/150?u=foo-bar",
     dateOfBirth: `2000-${date.getMonth() + 1}-${date.getDate()}`,
   },
+
+  {
+    name: "Pelican Steve",
+    image: "https://i.pravatar.cc/150?u=pelican-steve",
+    dateOfBirth: `1984-${date.getMonth() + 1}-${date.getDate()}`,
+  },
 ];
