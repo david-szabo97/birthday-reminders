@@ -6,7 +6,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "format": "npm-run-all format:**",
     "lint": "npm-run-all lint:**",
     "format:js": "eslint src/**/*.{ts,tsx} --fix",
