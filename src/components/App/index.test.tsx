@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import App from "./App";
-import Person from "./interfaces/Person";
+import App from ".";
+import Person from "../../interfaces/Person";
 
 const date = new Date();
 const fiveYearsAgo = `${date.getFullYear() - 5}-${

@@ -1,8 +1,8 @@
 import React, { useMemo } from "react";
-import styles from "./App.module.css";
-import BirthdayList from "./components/BirthdayList";
-import { usePeople } from "./hooks/usePeople";
-import { isBirthday } from "./utils/isBirthday";
+import styles from "./index.module.css";
+import BirthdayList from "../BirthdayList";
+import { usePeople } from "../../hooks/usePeople";
+import { isBirthday } from "../../utils/isBirthday";
 
 function App() {
   const people = usePeople();
