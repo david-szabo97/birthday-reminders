@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { usePeople } from "./usePeople";
 import Person from "../interfaces/Person";
+import { people as defaultPeople } from "../data/people";
 
 describe("usePeople hook", () => {
   it("should return null first to indicate loading state", () => {
@@ -29,8 +30,7 @@ describe("usePeople hook", () => {
 
     render(<Test />);
 
-    expect(screen.getByText(/John Doe/)).toBeInTheDocument();
-    expect(screen.getByText(/Foo Bar/)).toBeInTheDocument();
+    expect(screen.getByText(JSON.stringify(defaultPeople))).toBeInTheDocument();
   });
 
   it("should return data from localStorage when it isn't empty", () => {
