@@ -1,0 +1,102 @@
+{
+  "name": "birthday-reminders",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "format": "npm-run-all format:**",
+    "lint": "npm-run-all lint:**",
+    "format:js": "eslint src/**/*.{ts,tsx} --fix",
+    "lint:js": "tsc --noEmit && eslint src/**/*.{ts,tsx}",
+    "format:css": "stylelint src/**/*.css --fix",
+    "lint:css": "stylelint src/**/*.css",
+    "format:package": "prettier --write package.json",
+    "lint:package": "prettier --check package.json && npmPkgJsonLint .",
+    "format:md": "prettier --write README.md && markdownlint-cli2 README.md --fix",
+    "lint:md": "prettier --check README.md && markdownlint-cli2 README.md"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:jsx-a11y/recommended",
+      "plugin:prettier/recommended",
+      "prettier/react"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-prettier/recommended"
+    ]
+  },
+  "npmpackagejsonlint": {
+    "extends": "npm-package-json-lint-config-default"
+  },
+  "prettier": {
+    "proseWrap": "always"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "yarn lint:js"
+    ],
+    "src/**/*.{css}": [
+      "yarn lint:css"
+    ],
+    "package.json": [
+      "yarn lint:package"
+    ],
+    "README.md": [
+      "yarn lint:md"
+    ]
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "typescript": "^4.0.3",
+    "web-vitals": "^0.2.4"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3",
+    "markdownlint": "^0.22.0",
+    "markdownlint-cli2": "^0.0.13",
+    "npm-package-json-lint": "^5.1.0",
+    "npm-package-json-lint-config-default": "^3.0.0",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.8.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-prettier": "^1.1.2"
+  }
+}
