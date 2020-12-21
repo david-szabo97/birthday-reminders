@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import "./App.css";
+import styles from "./App.module.css";
 import BirthdayList from "./components/BirthdayList";
 import { usePeople } from "./hooks/usePeople";
 import { isBirthday } from "./utils/isBirthday";
@@ -18,26 +18,28 @@ function App() {
 
   if (!people) {
     return (
-      <div className="App">
-        <h1>Birthdays</h1>
-        <h2>Loading...</h2>
-      </div>
+      <>
+        <h1 className={styles.textCenter}>Birthdays</h1>
+        <h2 className={styles.textCenter}>Loading...</h2>
+      </>
     );
   }
 
   return (
-    <div className="App">
-      <h1>Birthdays</h1>
+    <>
+      <h1 className={styles.textCenter}>Birthdays</h1>
 
       {birthdays?.length > 0 ? (
         <>
-          <h2>{birthdays.length} birthdays today.</h2>
+          <h2 className={styles.textCenter}>
+            {birthdays.length} birthdays today.
+          </h2>
           <BirthdayList people={birthdays} />
         </>
       ) : (
-        <h2>No birthdays today.</h2>
+        <h2 className={styles.textCenter}>No birthdays today.</h2>
       )}
-    </div>
+    </>
   );
 }
 

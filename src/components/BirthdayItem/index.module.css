@@ -1,20 +1,4 @@
-body {
-  background: #e2e1e0;
-}
-
-h1,
-h2 {
-  text-align: center;
-}
-
-ul {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  max-width: 30rem;
-}
-
-li {
+.root {
   background: white;
   position: relative;
   margin: 0;
@@ -24,7 +8,11 @@ li {
   min-height: 4rem;
 }
 
-li img {
+.root + .root {
+  margin-top: 1rem;
+}
+
+.avatar {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -34,11 +22,11 @@ li img {
   border-radius: 100%;
 }
 
-li h3 {
+.name {
   margin: 0;
   padding: 0;
 }
 
-li + li {
-  margin-top: 1rem;
+.age {
+  margin-top: 0.5rem;
 }

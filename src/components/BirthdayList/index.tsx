@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.module.css";
 import Person from "../../interfaces/Person";
 import BirthdayItem from "../BirthdayItem";
 
@@ -8,7 +9,7 @@ type Props = {
 
 const BirthdayList: React.FC<Props> = ({ people }) => {
   return (
-    <ul>
+    <ul className={styles.root}>
       {people.map((person) => (
         <BirthdayItem
           key={`${person.name}-${person.dateOfBirth}`}
