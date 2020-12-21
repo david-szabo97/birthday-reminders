@@ -22,7 +22,7 @@ describe("BirthdayItem", () => {
     const imageEle = screen.getByAltText(person.name);
     expect(imageEle).toHaveAttribute("src", person.image);
 
-    const ageEle = screen.getByText("5 years");
+    const ageEle = screen.getByText("5 years old today");
     expect(ageEle).toBeInTheDocument();
   });
 });

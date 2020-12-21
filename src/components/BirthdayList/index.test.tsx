@@ -37,7 +37,7 @@ describe("BirthdayList", () => {
       const imageEle = screen.getByAltText(person.name);
       expect(imageEle).toHaveAttribute("src", person.image);
 
-      const ageEle = screen.getByText(`${age} years`);
+      const ageEle = screen.getByText(`${age} years old today`);
       expect(ageEle).toBeInTheDocument();
     }
   });

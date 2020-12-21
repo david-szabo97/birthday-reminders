@@ -10,7 +10,9 @@ const BirthdayItem: React.FC<Props> = ({ image, name, dateOfBirth }) => {
     <li className={styles.root}>
       <img className={styles.avatar} src={image} alt={name} />
       <h3 className={styles.name}>{name}</h3>
-      <div className={styles.age}>{getAge(new Date(), dateOfBirth)} years</div>
+      <div className={styles.age}>
+        {getAge(new Date(), dateOfBirth)} years old today
+      </div>
     </li>
   );
 };

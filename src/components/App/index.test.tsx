@@ -44,7 +44,7 @@ describe("App", () => {
     const imageEle = screen.getByAltText(personWithBirthday.name);
     expect(imageEle).toHaveAttribute("src", personWithBirthday.image);
 
-    const ageEle = screen.getByText("5 years");
+    const ageEle = screen.getByText("5 years old today");
     expect(ageEle).toBeInTheDocument();
   });
 
@@ -61,7 +61,7 @@ describe("App", () => {
     const imageEle = screen.queryByAltText(personWithoutBirthday.name);
     expect(imageEle).not.toBeInTheDocument();
 
-    const ageEle = screen.queryByText("8 years");
+    const ageEle = screen.queryByText("8 years old today");
     expect(ageEle).not.toBeInTheDocument();
   });
 
