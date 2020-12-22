@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./index.module.css";
+import styles from "./BirthdayList.module.css";
 import { Person } from "../../interfaces/Person";
 import { BirthdayItem } from "../BirthdayItem";
 

@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import styles from "./index.module.css";
+import styles from "./App.module.css";
 import { BirthdayList } from "../BirthdayList";
 import { usePeople } from "../../hooks/usePeople";
 import { isBirthday } from "../../utils/isBirthday";
