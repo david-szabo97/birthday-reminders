@@ -8,5 +8,8 @@ jobs:
         uses: actions/checkout@v1
       - name: Cypress run
         uses: cypress-io/github-action@v2
+        env:
+          HOST: localhost
+          PORT: 3000
         with:
-          start: export HOST=localhost && export PORT=3000 && npm start
+          start: yarn start
