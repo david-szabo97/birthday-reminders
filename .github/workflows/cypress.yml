@@ -9,4 +9,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          start: set HOST=localhost PORT=3000 npm start
+          start: export HOST=localhost && export PORT=3000 && npm start
