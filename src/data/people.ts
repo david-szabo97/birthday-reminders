@@ -1,4 +1,4 @@
-import Person from "../interfaces/Person";
+import { Person } from "../interfaces/Person";
 
 const date = new Date();
 

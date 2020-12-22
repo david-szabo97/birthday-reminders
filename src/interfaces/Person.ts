@@ -4,4 +4,4 @@ interface Person {
   dateOfBirth: string;
 }
 
-export default Person;
+export type { Person };

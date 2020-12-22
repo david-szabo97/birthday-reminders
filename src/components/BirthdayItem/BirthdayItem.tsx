@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./index.module.css";
-import Person from "../../interfaces/Person";
+import { Person } from "../../interfaces/Person";
 import { getAge } from "../../utils/getAge";
 
 type Props = Person;
@@ -17,4 +17,6 @@ const BirthdayItem: React.FC<Props> = ({ image, name, dateOfBirth }) => {
   );
 };
 
-export default React.memo(BirthdayItem);
+const BirthdayItemMemoized = React.memo(BirthdayItem);
+
+export { BirthdayItemMemoized as BirthdayItem };

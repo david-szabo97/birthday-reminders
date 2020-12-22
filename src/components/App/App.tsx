@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import styles from "./index.module.css";
-import BirthdayList from "../BirthdayList";
+import { BirthdayList } from "../BirthdayList";
 import { usePeople } from "../../hooks/usePeople";
 import { isBirthday } from "../../utils/isBirthday";
 
@@ -43,4 +43,4 @@ function App() {
   );
 }
 
-export default App;
+export { App };

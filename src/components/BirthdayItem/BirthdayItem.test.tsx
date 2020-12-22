@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import BirthdayItem from "./";
-import Person from "../../interfaces/Person";
+import { BirthdayItem } from "./";
+import { Person } from "../../interfaces/Person";
 
 describe("BirthdayItem", () => {
   it("renders item", () => {

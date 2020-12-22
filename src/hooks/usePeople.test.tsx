@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { usePeople } from "./usePeople";
-import Person from "../interfaces/Person";
+import { Person } from "../interfaces/Person";
 import { people as defaultPeople } from "../data/people";
 
 describe("usePeople hook", () => {

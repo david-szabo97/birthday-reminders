@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./index.module.css";
-import Person from "../../interfaces/Person";
-import BirthdayItem from "../BirthdayItem";
+import { Person } from "../../interfaces/Person";
+import { BirthdayItem } from "../BirthdayItem";
 
 type Props = {
   people: Person[];
@@ -20,4 +20,6 @@ const BirthdayList: React.FC<Props> = ({ people }) => {
   );
 };
 
-export default React.memo(BirthdayList);
+const BirthdayListMemoized = React.memo(BirthdayList);
+
+export { BirthdayListMemoized as BirthdayList };

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Person from "../interfaces/Person";
+import { Person } from "../interfaces/Person";
 import { people as defaultPeople } from "../data/people";
 
 export const usePeople = () => {
